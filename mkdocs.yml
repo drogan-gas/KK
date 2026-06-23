@@ -1,0 +1,10 @@
+site_name: Wiki 鍋爐手冊
+theme:
+  name: material # 超漂亮的 Material 主題
+
+plugins:
+  - search
+  - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
+  
+# 💡 告訴 MkDocs：去讀取你指定同步的那個資料夾（例如：公開筆記）
+docs_dir: '西門子'
