@@ -17,3 +17,65 @@ body, input {
 
 /* 斜體 */
 .cm-em,cm-em,em{color:gray}
+
+
+/* extra.css - Obsidian Minimal Dark Theme Replica */
+
+:root, [data-md-color-scheme="slate"] {
+  /* --- Minimal Dark 核心背景與文字顏色 --- */
+  --md-default-bg-color:        #1e1e1e; /* 網頁主背景 (Minimal 預設深色) */
+  --md-default-fg-color:        #ededed; /* 主文字顏色 */
+  --md-default-fg-color--light: #a3a3a3; /* 次要文字、註解 */
+  
+  /* --- 頂部導覽列與側邊欄 (極簡無邊框感) --- */
+  --md-primary-fg-color:        #181818; /* 頂部 Header 背景 */
+  --md-primary-fg-color--dark: #121212;
+  --md-primary-bg-color:        #ededed;
+  
+  /* --- 連結與強調色 (Minimal 經典 Accent) --- */
+  --md-accent-fg-color:        #e69f43; /* 連結、當前頁面提示色 */
+  --md-accent-fg-color--transparent: rgba(230, 159, 67, 0.1);
+  
+  /* --- 程式碼區塊與語法高亮背景 --- */
+  --md-code-bg-color:           #252525; /* Code block 背景 */
+  --md-code-fg-color:           #e5c07b; 
+  
+  /* --- 邊框與分隔線 --- */
+  --md-typeset-border-color:    #2e2e2e;
+}
+
+/* --- 網頁細節微調：更貼近 Obsidian 質感 --- */
+
+/* 1. 調整全域字體，對齊繁體中文精緻感 */
+body, input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+/* 2. 移除頂部導覽列的陰影，改用極細的 Minimal 風格分界線 */
+.md-header {
+  backdrop-filter: blur(20px);
+  background-color: rgba(24, 24, 24, 0.8) !important;
+  border-bottom: 1px solid #2e2e2e;
+  box-shadow: none !important;
+}
+
+/* 3. 讓 Obsidian 的 [[雙向連結]] 帶有淡淡的底線與優雅的漸變 hover */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.md-typeset a:hover {
+  color: #f0b25e;
+  border-bottom-color: #f0b25e;
+}
+
+/* 4. 微調 Mermaid 流程圖在深色模式下的透明度與背景 */
+.mermaid {
+  background-color: #252525 !important;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 15px;
+}
