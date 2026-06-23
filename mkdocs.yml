@@ -1,10 +1,10 @@
-site_name: Wiki 鍋爐手冊
+site_name: 我的 Obsidian 數位花園
+site_url: https://github.com/drogan-gas/KK/ # 💡 務必加上這一行！結尾要有斜線 /
 theme:
-  name: material # 超漂亮的 Material 主題
+  name: material
 
 plugins:
   - search
   - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
-  
-# 💡 告訴 MkDocs：去讀取你指定同步的那個資料夾（例如：公開筆記）
-docs_dir: '西門子'
+
+docs_dir: '公開筆記' # 💡 這裡必須與你實際要公開的資料夾名稱完全一致
