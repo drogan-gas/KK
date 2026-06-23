@@ -79,3 +79,28 @@ body, input {
   border-radius: 4px;
   padding: 15px;
 }
+
+/* extra.css */
+
+:root, [data-md-color-scheme="slate"] {
+  /* --- 修正：直接強制改掉 Material 核心的連結與 Hover 變數 --- */
+  --md-accent-fg-color:             #e69f43; /* 預設超連結顏色 (Minimal 招牌橘黃) */
+  --md-accent-fg-color--transparent: rgba(230, 159, 67, 0.1);
+  
+  /* 加上這兩行，強行把文字類型的連結綁定到你的 Accent 色，絕不回退成黑色 */
+  --md-typeset-a-color:             #e69f43 !important; 
+  --md-typeset-a-color--hover:       #f0b25e !important;
+}
+
+/* --- 雙向連結與一般連結的樣式微調 --- */
+.md-typeset a {
+  color: var(--md-typeset-a-color) !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.md-typeset a:hover {
+  color: var(--md-typeset-a-color--hover) !important;
+  border-bottom-color: var(--md-typeset-a-color--hover) !important;
+}
