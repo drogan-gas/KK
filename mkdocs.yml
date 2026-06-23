@@ -2,6 +2,13 @@ site_name: Wiki 安裝工程
 site_url: https://github.com/drogan-gas/KK/ # 💡 務必加上這一行！結尾要有斜線 /
 theme:
   name: material
+  # 💡 調整為 Minimal 質感核心設定
+  palette:
+    scheme: slate       # 強制使用深色模式
+    primary: custom     # 自訂主色調
+    accent: custom      # 自訂強調色
+  features:
+    - content.code.copy # 讓程式碼區塊右上有複製按鈕
 
 plugins:
   - search
