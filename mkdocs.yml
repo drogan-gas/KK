@@ -7,4 +7,4 @@ plugins:
   - search
   - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
 
-docs_dir: '西門子' # 💡 這裡必須與你實際要公開的資料夾名稱完全一致
+docs_dir: 'WebWiki' # 💡 這裡必須與你實際要公開的資料夾名稱完全一致
