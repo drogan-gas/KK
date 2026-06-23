@@ -8,3 +8,7 @@ plugins:
   - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
 
 docs_dir: 'WebWiki' # 💡 這裡必須與你實際要公開的資料夾名稱完全一致
+
+# 💡 告訴 MkDocs 要載入這個額外的 CSS 檔案
+extra_css:
+  - stylesheets/extra.css

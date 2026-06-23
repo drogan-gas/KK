@@ -1,0 +1,16 @@
+:root {
+  /* 修改 Material 主題的主色調 (例如改成 Obsidian 的暗黑科技風) */
+  --md-primary-fg-color:        #24292e; 
+  --md-primary-fg-color--dark: #1f2327;
+  
+  /* 修改滑鼠點擊、連結的強調顏色 */
+  --md-accent-fg-color:        #858585; 
+}
+
+/* 讓內文的字體更適合繁體中文閱讀 */
+body, input {
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
+}
+
+/* 如果你想微調 Obsidian 匯出網頁後的特定元件 (例如 Meta Bind 或自訂區塊) */
+/* 可以在這裡利用瀏覽器 F12 抓取 class 名稱來直接修改 */
