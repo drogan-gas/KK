@@ -14,3 +14,6 @@ body, input {
 
 /* 如果你想微調 Obsidian 匯出網頁後的特定元件 (例如 Meta Bind 或自訂區塊) */
 /* 可以在這裡利用瀏覽器 F12 抓取 class 名稱來直接修改 */
+
+/* 斜體 */
+.cm-em,cm-em,em{color:gray}
