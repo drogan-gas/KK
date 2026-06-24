@@ -9,7 +9,9 @@ theme:
     accent: custom      # 自訂強調色
   features:
     - content.code.copy # 讓程式碼區塊右上有複製按鈕
-
+  font:
+    text: iansui
+    
 plugins:
   - search
   - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
