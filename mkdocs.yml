@@ -10,7 +10,7 @@ theme:
   features:
     - content.code.copy # 讓程式碼區塊右上有複製按鈕
   font:
-    text: iansui
+    text: Iansui
     
 plugins:
   - search
