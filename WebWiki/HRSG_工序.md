@@ -1,11 +1,5 @@
-這份《HRSG 機械安裝完整施工順序說明書》已依照您的要求，將更新後的施工流程圖（Full Erection Flowchart）整合至手冊中，並補足了 SCR/AIG、HP 分離器、流量導風板等所有遺漏的安裝步驟與技術細節。
 
----
-
-HRSG_機械安裝完整施工順序說明書
-==================
-
-這份文件包含精確的施工流程圖（使用 Mermaid 語法）以及基於技術手冊整理的完整施工順序表，旨在確保安裝過程符合 ASME 規範與製造商技術要求。
+這份文件包含精確的施工流程圖以及基於技術手冊整理的完整施工順序表，旨在確保安裝過程符合 ASME 規範與製造商技術要求。
 
 1\. 施工流程圖 (Full Erection Flowchart)
 -----------------------------------
@@ -16,7 +10,7 @@ graph TD
     subgraph P1 [第一階段：基礎與預組裝]
         S1[基礎審查與打毛 Foundation Review/Chipping] --> S2[主鋼構門架預組裝 Main Steel Pre-assembly]
         S1 --> S3[煙囪段與導風板預組裝 Stack & Damper Pre-assembly]
-        S1 --> S4[配管與二次鋼構預組裝 Piping & Secondary Steel]
+        S1 --> S4[管路與二次鋼構預組裝 Piping & Secondary Steel]
         S2 --> S5[基礎灌漿 Grouting - Phase 1]
     end
 
