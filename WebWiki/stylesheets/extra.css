@@ -2,7 +2,9 @@
   /* 修改 Material 主題的主色調 (例如改成 Obsidian 的暗黑科技風) */
   --md-primary-fg-color:        #24292e; 
   --md-primary-fg-color--dark: #1f2327;
-  
+  --md-text-font-family: "Iansui"; /* 內文字體 */
+  --md-code-font-family: "Roboto", monospace; /* 程式碼字體 */
+	
   /* 修改滑鼠點擊、連結的強調顏色 */
   --md-accent-fg-color:        #858585; 
 }
