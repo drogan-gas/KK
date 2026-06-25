@@ -11,7 +11,7 @@
 
 /* 讓內文的字體更適合繁體中文閱讀 */
 body, input {
-  font-family: Iansui","Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
+  font-family: "Iansui","Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
 }
 
 /* 如果你想微調 Obsidian 匯出網頁後的特定元件 (例如 Meta Bind 或自訂區塊) */
