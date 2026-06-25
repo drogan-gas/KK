@@ -11,7 +11,8 @@ theme:
   features:
     - content.code.copy # 讓程式碼區塊右上有複製按鈕
   font:
-    text: Iansui
+    text: Iansui # 內文字體
+    code: Roboto # 程式碼字體
     
 plugins:
   - search
