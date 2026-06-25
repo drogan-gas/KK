@@ -13,7 +13,7 @@
 body, input {
   font-family: "Iansui","Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
 }
-
+html,body{font-family: "Iansui"}
 /* 如果你想微調 Obsidian 匯出網頁後的特定元件 (例如 Meta Bind 或自訂區塊) */
 /* 可以在這裡利用瀏覽器 F12 抓取 class 名稱來直接修改 */
 
