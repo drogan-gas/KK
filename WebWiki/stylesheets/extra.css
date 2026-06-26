@@ -28,29 +28,11 @@ body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3
   font-family: 'Iansui', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* 💡 修正：讓斜體字強制換行，但允許後續的連結保持在同一行 */
+/* 💡 新增：將 Markdown 的 *斜體* 或 _斜體_ 顯示為低調灰色 */
 .md-typeset em {
   color: var(--md-default-fg-color--light) !important;
   font-style: italic;
-  display: inline-block;  /* 允許設定邊距，且具備行內特質 */
-  width: auto;            /* 寬度自適應內容 */
-  line-height: 1.2;
-  
-  /* 透過在前方針對 em 偽元素加入換行，強制 em 自己跳到新行，但不影響後方元素 */
-  clear: both;
-}
-
-/* 核心技巧：利用 CSS 選擇器，強迫 em 前面塞一個「換行字元」，但後面不換行 */
-.md-typeset em::before {
-  content: "\A";
-  white-space: pre-wrap;
-}
-
-/* 確保緊跟在 em 後面的 a 標籤維持行內貼齊 */
-.md-typeset em + a {
-  display: inline-block;
-  margin-left: 5px; /* 讓連結跟斜體字之間有一點點舒適的空格 */
-  vertical-align: baseline;
+  display: block; /* 💡 關鍵：強制讓它變成區塊元素，前後文字就會被擠到下一行 */ margin: 5px 0; /* 可選：幫換行後的斜體字加上下一點上下間距，視覺上比較不擁擠 */
 }
 
 /* 程式碼區塊保持等寬字型 */
