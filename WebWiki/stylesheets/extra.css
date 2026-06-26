@@ -4,7 +4,7 @@
   /* --- Minimal Dark 核心背景與文字顏色 --- */
   --md-default-bg-color:        #1e1e1e; 
   --md-default-fg-color:        #ededed; 
-  --md-default-fg-color--light: #a3a3a3; 
+  --md-default-fg-color--light: #a3a3a3; /* 質感次要灰色 */
   
   /* --- 頂部導覽列與側邊欄 --- */
   --md-primary-fg-color:        #181818; 
@@ -26,6 +26,12 @@
 /* --- 全域套用芫荽體 --- */
 body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3 {
   font-family: 'Iansui', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* 💡 新增：將 Markdown 的 *斜體* 或 _斜體_ 顯示為低調灰色 */
+.md-typeset em {
+  color: var(--md-default-fg-color--light) !important;
+  font-style: italic;
 }
 
 /* 程式碼區塊保持等寬字型 */

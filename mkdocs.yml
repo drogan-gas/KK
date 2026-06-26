@@ -13,9 +13,9 @@ theme:
 
 plugins:
   - search
-  - roamlinks           # 支援 Obsidian 雙向連結 [[WikiLinks]]
+  - roamlinks           # 支援 Obsidian 雙向連結
 
-docs_dir: 'WebWiki'     # 💡 你的特定同步資料夾名稱
+docs_dir: 'WebWiki'     # 💡 這裡已改為你的特定同步資料夾名稱
 
 extra_css:
   - https://fonts.googleapis.com/css2?family=Iansui&display=swap  # 載入 Google 芫荽字型
