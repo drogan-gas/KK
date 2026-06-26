@@ -32,6 +32,7 @@ body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3
 .md-typeset em {
   color: var(--md-default-fg-color--light) !important;
   font-style: italic;
+  display: block; /* 💡 關鍵：強制讓它變成區塊元素，前後文字就會被擠到下一行 */ margin: 5px 0; /* 可選：幫換行後的斜體字加上下一點上下間距，視覺上比較不擁擠 */
 }
 
 /* 程式碼區塊保持等寬字型 */
