@@ -4,38 +4,35 @@ site_url: https://drogan-gas.github.io/KK/
 theme:
   name: material
   palette:
-    scheme: slate       # 預設強制啟動 Minimal Slate 深色模式
-    primary: custom     # 自訂主色調變數（由 extra.css 控制）
-    accent: custom      # 自訂強調色變數（由 extra.css 控制）
+    scheme: slate
+    primary: custom
+    accent: custom
   features:
-    - content.code.copy # 在程式碼區塊右上角自動加上「複製」按鈕
-    # 💡 1. 強制讓 TOC 目錄與導覽列更緊密結合，並確保其顯示狀態
-    - toc.follow        
-    - navigation.top    # 回到頂端按鈕（對大篇幅工務紀錄很有幫助）
-  font: false           # 停用 Material 預設的 Roboto 字型
+    - content.code.copy
+    - toc.follow
+    - navigation.top
+  font: false
 
 plugins:
-  - search              # 啟用網站全域關鍵字搜尋功能
-  - roamlinks           # 自動將 Obsidian 的雙向連結 [[WikiLinks]] 轉譯
+  - search
+  - roamlinks
 
-docs_dir: 'WebWiki'     # 指定只同步與編譯這個特定資料夾
+docs_dir: 'WebWiki'
 
 extra_css:
-  - https://fonts.googleapis.com/css2?family=Iansui&display=swap  # 遠端載入 Google 芫荽字型
-  - stylesheets/extra.css                                         # 載入本地自訂樣式表
+  - "https://fonts.googleapis.com/css2?family=Iansui&display=swap"
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
-        - name: mermaid   # 讓 MkDocs 能夠識別 ```mermaid 語法區塊
+        - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-          
-  # 💡 2. 強制解除 TOC 隱藏限制的核心設定！
   - toc:
-      permalink: true     # 在標題旁自動加上錨點連結（方便工程人員複製特定章節網址）
-      baselevel: 1        # 讓目錄計算從基礎一級標題開始
-      toc_depth: 1-6      # 💡 強制目錄深度必須涵蓋 H1 到 H6，只要有標題就必須顯示目錄！
+      permalink: true
+      baselevel: 1
+      toc_depth: 1-6
 
 extra_javascript:
-  - [https://unpkg.com/mermaid@10/dist/mermaid.min.js](https://unpkg.com/mermaid@10/dist/mermaid.min.js)              # 載入遠端 Mermaid 渲染引擎
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
