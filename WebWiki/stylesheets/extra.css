@@ -32,10 +32,9 @@ body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3
 .md-typeset em {
   color: var(--md-default-fg-color--light) !important;
   font-style: italic;
-  
-  /* 關鍵組合拳 */
   display: inline-block;  /* 允許設定邊距，且具備行內特質 */
   width: auto;            /* 寬度自適應內容 */
+  line-height: 1.2;
   
   /* 透過在前方針對 em 偽元素加入換行，強制 em 自己跳到新行，但不影響後方元素 */
   clear: both;
