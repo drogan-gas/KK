@@ -29,7 +29,7 @@ body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3
 }
 
 /* 💡 新增：將 Markdown 的 *斜體* 或 _斜體_ 顯示為低調灰色 */
-.md-typeset em {
+.md-typeset p + em {
   color: var(--md-default-fg-color--light) !important;
   font-style: italic;
   display: block; /* 💡 關鍵：強制讓它變成區塊元素，前後文字就會被擠到下一行 */ margin: 5px 0; /* 可選：幫換行後的斜體字加上下一點上下間距，視覺上比較不擁擠 */
