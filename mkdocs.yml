@@ -1,32 +1,26 @@
- # 使用說明 vcdemy.com/mkdocs/mkdocs_fonts/
 site_name: Wiki 安裝工程
-site_url: https://github.com/drogan-gas/KK/ # 💡 務必加上這一行！結尾要有斜線 /
-theme:                   
+site_url: https://drogan-gas.github.io/KK/
+
+theme:
   name: material
-  # 💡 調整為 Minimal 質感核心設定
   palette:
-    scheme: slate       # 強制使用深色模式
-    primary: custom     # 自訂主色調
-    accent: custom      # 自訂強調色
+    scheme: slate       # 保持 Minimal 深色模式
+    primary: custom
+    accent: custom
   features:
-    - content.code.copy # 讓程式碼區塊右上有複製按鈕
-  font:
-    text: Iansui # 內文字體
-    code: Roboto # 程式碼字體
-    
+    - content.code.copy # 程式碼複製按鈕
+  font: false           # 停用預設字型以套用芫荽體
+
 plugins:
   - search
-  - roamlinks # 支援 Obsidian 的 [[雙向連結]] 語法
+  - roamlinks           # 支援 Obsidian 雙向連結 [[WikiLinks]]
 
-docs_dir: 'WebWiki' # 💡 這裡必須與你實際要公開的資料夾名稱完全一致
+docs_dir: 'WebWiki'     # 💡 你的特定同步資料夾名稱
 
-# 💡 告訴 MkDocs 要載入這個額外的 CSS 檔案
 extra_css:
+  - https://fonts.googleapis.com/css2?family=Iansui&display=swap  # 載入 Google 芫荽字型
   - stylesheets/extra.css
-extra_css:
- - https://fonts.googleapis.com/css2?family=Iansui&display=swap
 
-# 💡 1. 啟用 Markdown 擴充功能以支援 Python Markdown 中的 SuperFences
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -34,6 +28,5 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-# 💡 2. 載入 Material 主題內建的 Mermaid 渲染腳本
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js

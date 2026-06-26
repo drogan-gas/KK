@@ -1,59 +1,39 @@
-:root {
-  /* 修改 Material 主題的主色調 (例如改成 Obsidian 的暗黑科技風) */
-  --md-primary-fg-color:        #24292e; 
-  --md-primary-fg-color--dark: #1f2327;
-  --md-text-font-family: "Iansui"; /* 內文字體 */
-  --md-code-font-family: "Roboto", monospace; /* 程式碼字體 */
-	
-  /* 修改滑鼠點擊、連結的強調顏色 */
-  --md-accent-fg-color:        #858585; 
-}
-
-/* 讓內文的字體更適合繁體中文閱讀 */
-body, input {
-  font-family: "Iansui","Helvetica Neue", Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
-}
-html,body{font-family: "Iansui"}
-/* 如果你想微調 Obsidian 匯出網頁後的特定元件 (例如 Meta Bind 或自訂區塊) */
-/* 可以在這裡利用瀏覽器 F12 抓取 class 名稱來直接修改 */
-
-/* 斜體 */
-.cm-em,cm-em,em{color:gray}
-
-
-/* extra.css - Obsidian Minimal Dark Theme Replica */
+/* extra.css - Obsidian Minimal Dark Theme & Iansui Font */
 
 :root, [data-md-color-scheme="slate"] {
   /* --- Minimal Dark 核心背景與文字顏色 --- */
-  --md-default-bg-color:        #1e1e1e; /* 網頁主背景 (Minimal 預設深色) */
-  --md-default-fg-color:        #ededed; /* 主文字顏色 */
-  --md-default-fg-color--light: #a3a3a3; /* 次要文字、註解 */
+  --md-default-bg-color:        #1e1e1e; 
+  --md-default-fg-color:        #ededed; 
+  --md-default-fg-color--light: #a3a3a3; 
   
-  /* --- 頂部導覽列與側邊欄 (極簡無邊框感) --- */
-  --md-primary-fg-color:        #181818; /* 頂部 Header 背景 */
+  /* --- 頂部導覽列與側邊欄 --- */
+  --md-primary-fg-color:        #181818; 
   --md-primary-fg-color--dark: #121212;
   --md-primary-bg-color:        #ededed;
   
-  /* --- 連結與強調色 (Minimal 經典 Accent) --- */
-  --md-accent-fg-color:        #e69f43; /* 連結、當前頁面提示色 */
+  /* --- 修正：強制綁定核心超連結變數，絕不回退成黑色 --- */
+  --md-accent-fg-color:             #e69f43; /* Minimal 經典橘黃 */
   --md-accent-fg-color--transparent: rgba(230, 159, 67, 0.1);
+  --md-typeset-a-color:             #e69f43 !important; 
+  --md-typeset-a-color--hover:       #f0b25e !important;
   
-  /* --- 程式碼區塊與語法高亮背景 --- */
-  --md-code-bg-color:           #252525; /* Code block 背景 */
+  /* --- 其它區塊 --- */
+  --md-code-bg-color:           #252525; 
   --md-code-fg-color:           #e5c07b; 
-  
-  /* --- 邊框與分隔線 --- */
   --md-typeset-border-color:    #2e2e2e;
 }
 
-/* --- 網頁細節微調：更貼近 Obsidian 質感 --- */
-
-/* 1. 調整全域字體，對齊繁體中文精緻感 */
-body, input {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+/* --- 全域套用芫荽體 --- */
+body, input, .md-header, .md-nav, .md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: 'Iansui', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* 2. 移除頂部導覽列的陰影，改用極細的 Minimal 風格分界線 */
+/* 程式碼區塊保持等寬字型 */
+code, kbd, pre {
+  font-family: var(--md-code-font-family, Courier, monospace) !important;
+}
+
+/* 移除頂部導覽列陰影，改用極細分界線 */
 .md-header {
   backdrop-filter: blur(20px);
   background-color: rgba(24, 24, 24, 0.8) !important;
@@ -61,40 +41,7 @@ body, input {
   box-shadow: none !important;
 }
 
-/* 3. 讓 Obsidian 的 [[雙向連結]] 帶有淡淡的底線與優雅的漸變 hover */
-.md-typeset a {
-  color: var(--md-accent-fg-color);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.25s, color 0.25s;
-}
-
-.md-typeset a:hover {
-  color: #f0b25e;
-  border-bottom-color: #f0b25e;
-}
-
-/* 4. 微調 Mermaid 流程圖在深色模式下的透明度與背景 */
-.mermaid {
-  background-color: #252525 !important;
-  border: 1px solid #2e2e2e;
-  border-radius: 4px;
-  padding: 15px;
-}
-
-/* extra.css */
-
-:root, [data-md-color-scheme="slate"] {
-  /* --- 修正：直接強制改掉 Material 核心的連結與 Hover 變數 --- */
-  --md-accent-fg-color:             #e69f43; /* 預設超連結顏色 (Minimal 招牌橘黃) */
-  --md-accent-fg-color--transparent: rgba(230, 159, 67, 0.1);
-  
-  /* 加上這兩行，強行把文字類型的連結綁定到你的 Accent 色，絕不回退成黑色 */
-  --md-typeset-a-color:             #e69f43 !important; 
-  --md-typeset-a-color--hover:       #f0b25e !important;
-}
-
-/* --- 雙向連結與一般連結的樣式微調 --- */
+/* 超連結漸變Hover效果 */
 .md-typeset a {
   color: var(--md-typeset-a-color) !important;
   text-decoration: none;
@@ -105,4 +52,22 @@ body, input {
 .md-typeset a:hover {
   color: var(--md-typeset-a-color--hover) !important;
   border-bottom-color: var(--md-typeset-a-color--hover) !important;
+}
+
+/* 美化 Google Forms 嵌入卡片 */
+iframe[src*="google.com/forms"] {
+  border: 1px solid #2e2e2e !important;
+  border-radius: 8px;
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mermaid 流程圖樣式優化 */
+.mermaid {
+  background-color: #252525 !important;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 15px;
 }
