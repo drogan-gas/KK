@@ -4,7 +4,7 @@
   /* --- Minimal Dark 核心背景與文字顏色 --- */
   --md-default-bg-color:        #1e1e1e; 
   --md-default-fg-color:        #ededed; 
-  --md-default-fg-color--light: #a3a3a3; /* 質感次要灰色 */
+  --md-default-fg-color--light: gray; /* 質感次要灰色 */
   
   /* --- 頂部導覽列與側邊欄 --- */
   --md-primary-fg-color:        #181818; 
