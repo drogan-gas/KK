@@ -1,17 +1,10 @@
 site_name: Wiki 安裝工程
-site_url: https://drogan-gas.github.io/KK/
+site_url: https://github.io
 
+# 使用 MkDocs 內建的極簡傳統主題
 theme:
-  name: material
-  palette:
-    scheme: slate
-    primary: custom
-    accent: custom
-  features:
-    - content.code.copy
-    - toc.follow
-    - navigation.top
-  font: false
+  name: mkdocs
+  highlightjs: true  # 啟用程式碼高亮支援
 
 plugins:
   - search
@@ -20,10 +13,9 @@ plugins:
 docs_dir: 'WebWiki'
 
 extra_css:
-  - "https://fonts.googleapis.com/css2?family=Iansui&display=swap"
+  - "https://googleapis.com"
   - stylesheets/extra.css
 
-# 修正 1：移除重複的 markdown_extensions 宣告
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -33,7 +25,4 @@ markdown_extensions:
   - toc:
       permalink: 🔗
       baselevel: 1
-      toc_depth: 1-6
-
-# 修正 2：在 Material 主題中，Mermaid 不再建議使用 extra_javascript
-# 建議直接使用主題內建的支援（見下方說明）
+      toc_depth: 1-6  # 現在極簡主題會 100% 聽從此設定，完美顯示第 1 層
