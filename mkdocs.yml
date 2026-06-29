@@ -1,10 +1,18 @@
 site_name: Wiki 安裝工程
 site_url: https://github.io
 
-# 使用 MkDocs 內建的極簡傳統主題
 theme:
-  name: mkdocs
-  highlightjs: true  # 啟用程式碼高亮支援
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  features:
+    - content.code.copy
+    - toc.follow
+    - navigation.top
+    - toc.integrate     # ✨ 關鍵：加入這一行，目錄會融入左側，並顯示所有第 1 層標題
+  font: false
 
 plugins:
   - search
@@ -25,4 +33,4 @@ markdown_extensions:
   - toc:
       permalink: 🔗
       baselevel: 1
-      toc_depth: 1-6  # 現在極簡主題會 100% 聽從此設定，完美顯示第 1 層
+      toc_depth: 1-6
