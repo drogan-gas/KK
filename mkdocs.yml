@@ -23,6 +23,7 @@ extra_css:
   - "https://fonts.googleapis.com/css2?family=Iansui&display=swap"
   - stylesheets/extra.css
 
+# 修正 1：移除重複的 markdown_extensions 宣告
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -34,5 +35,5 @@ markdown_extensions:
       baselevel: 1
       toc_depth: 1-6
 
-extra_javascript:
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+# 修正 2：在 Material 主題中，Mermaid 不再建議使用 extra_javascript
+# 建議直接使用主題內建的支援（見下方說明）
