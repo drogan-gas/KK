@@ -1,5 +1,5 @@
 site_name: Wiki 安裝工程
-site_url: https://github.io
+site_url: https://drogan-gas.github.io/KK/
 
 theme:
   name: material
@@ -11,7 +11,7 @@ theme:
     - content.code.copy
     - toc.follow
     - navigation.top
-    - toc.integrate     # ✨ 關鍵：加入這一行，目錄會融入左側，並顯示所有第 1 層標題
+    - toc.integrate     # ✨目錄會融入左側，並顯示所有第 1 層標題
   font: false
 
 plugins:
@@ -33,4 +33,4 @@ markdown_extensions:
   - toc:
       permalink: 🔗
       baselevel: 1
-      toc_depth: 1-6
+      toc_depth: 1-3
