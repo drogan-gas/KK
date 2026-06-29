@@ -78,3 +78,22 @@ iframe[src*="google.com/forms"] {
   border-radius: 4px;
   padding: 15px;
 }
+
+/* 修改整體字型與精緻度 */
+body {
+  font-family: 'Iansui', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important;
+}
+
+/* 讓左側 TOC 中的第 1 層 (#) 標題變得更醒目、更有層次感 */
+.md-nav__link[href*="#"] {
+  font-weight: 500;
+  color: #e0e0e0 !important;
+}
+
+/* 當讀者捲動到該章節時，目錄的高亮顏色（這裡以產品說明書常見的科技橘為例，可自行修改） */
+.md-nav__link--active {
+  color: #ff9100 !important; 
+  font-weight: 700 !important;
+  border-left: 3px solid #ff9100;
+  padding-left: 8px;
+}
